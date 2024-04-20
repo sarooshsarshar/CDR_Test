@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "66971db1-792f-45f8-af16-c90632e10770",
+		"name": "CDR_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23087144"
+	},
+	"item": [
+		{
+			"name": "FileRead",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "filePath",
+							"value": "techtest_cdr.csv",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5219/api/seed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5219",
+					"path": [
+						"api",
+						"seed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getByClientOrReceipient",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5219/api/record/call-details?recipient=448000096481",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5219",
+					"path": [
+						"api",
+						"record",
+						"call-details"
+					],
+					"query": [
+						{
+							"key": "callerId",
+							"value": "441215598896",
+							"disabled": true
+						},
+						{
+							"key": "recipient",
+							"value": "448000096481"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllRecord",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5219/api/Record",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5219",
+					"path": [
+						"api",
+						"Record"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CountStats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5219/api/record/count-statistics",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5219",
+					"path": [
+						"api",
+						"record",
+						"count-statistics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "durationStatistics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5219/api/record/duration-statistics",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5219",
+					"path": [
+						"api",
+						"record",
+						"duration-statistics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "costStatistics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5219/api/record/call-cost-statistics",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5219",
+					"path": [
+						"api",
+						"record",
+						"call-cost-statistics"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
